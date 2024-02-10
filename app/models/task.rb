@@ -1,6 +1,6 @@
 class Task < ApplicationRecord
   validates :title, presence: true
-  validates :status, inclusion: { in: %w(To Do In Progress Done) }
+  validates :status, inclusion: { in: ["To Do", "In Progress", "Done"] }
   validate :validate_todo_limit, if: :todo_status?
 
   def self.too_many_todo_tasks?(status)
