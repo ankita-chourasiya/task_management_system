@@ -1,7 +1,7 @@
 FactoryBot.define do
-  factory :model do
+  factory :task do
     title { Faker::Lorem.sentence }
     description { Faker::Lorem.paragraph }
-    status { 'pending' }
+    status { 'Done' }
   end
 end
