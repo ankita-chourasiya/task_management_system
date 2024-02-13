@@ -73,7 +73,6 @@ RSpec.describe TasksController, type: :controller do
         put :update, params: { id: task.id, task: { title: nil } }
         task.reload
 
-        byebug
         expect(task.title).not_to be_nil
       end
 
